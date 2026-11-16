@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ScentLab MY: discover and compare Malaysian fragrances, explore notes, and find your next scent.">
+  <title>ScentLab MY — Local scents, real discoveries</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#home" aria-label="ScentLab home"><span class="logo-mark">✳</span> scentlab<span class="logo-dot">.</span><small>MY</small></a>
+    <nav aria-label="Main navigation"><a href="#discover">Discover</a><a href="#brands">Brands</a><a href="#compare">Compare <span id="compare-count">0</span></a><a href="#finder">Scent Finder</a></nav>
+    <button class="header-fav" id="wishlist-button" type="button">♡ <span id="wishlist-count">0</span> Saved</button>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">THE MALAYSIAN FRAGRANCE INDEX <span class="mini-star">✦</span> EST. 2026</p><h1>Find your<br><em>next signature</em><br>scent.</h1><p class="hero-text">Discover local fragrance houses. Explore the notes behind every bottle. Compare, rate and find what suits you — without the guesswork.</p><div class="hero-actions"><a class="btn primary" href="#discover">Explore fragrances <span>↗</span></a><a class="btn ghost" href="#finder">Find my scent →</a></div><div class="hero-stats"><div><strong id="hero-products">9</strong><small>SCENTS CATALOGUED</small></div><div><strong>03</strong><small>FEATURED BRANDS</small></div><div><strong>MY</strong><small>MADE FOR MALAYSIA</small></div></div></div>
+      <div class="hero-art" aria-label="Decorative perfume bottle illustration"><div class="halo"></div><div class="hero-bottle"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-body"><div class="bottle-brand">S C E N T L A B</div><div class="bottle-emblem">✳</div><div class="bottle-title">THE DISCOVERY<br>EDITION</div><div class="bottle-sub">EAU DE CURIOSITÉ</div></div></div><div class="art-caption">NOT AN AD. JUST AN OBSESSION.</div><span class="art-spark one">✧</span><span class="art-spark two">✳</span></div>
+    </section>
+    <div class="ticker"><span>SMELL DIFFERENT</span><span>✳</span><span>DISCOVER LOCAL</span><span>✳</span><span>WEAR WHAT YOU LOVE</span><span>✳</span><span>TRUST YOUR NOSE</span><span>✳</span><span>SCENTLAB MALAYSIA</span></div>
+    <section class="section" id="discover"><div class="section-top"><div><p class="eyebrow olive">01 / THE INDEX</p><h2>Explore the <em>collection.</em></h2><p class="muted">Discover fragrances from Malaysian brands, starting with the essentials.</p></div><span class="count-label" id="result-count">9 fragrances</span></div>
+      <div class="filterbar"><label class="search-field"><span>⌕</span><input id="search" type="search" placeholder="Search fragrances, notes, brands..." autocomplete="off" aria-label="Search fragrances"></label><select id="brand-filter" aria-label="Filter brand"><option value="">All brands</option></select><select id="family-filter" aria-label="Filter fragrance family"><option value="">All families</option></select><select id="budget-filter" aria-label="Maximum price"><option value="">Any price</option><option value="75">Under RM75</option><option value="150">Under RM150</option><option value="250">Under RM250</option></select><select id="sort" aria-label="Sort fragrances"><option value="name">Name A–Z</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">My rating</option></select></div>
+      <div class="catalogue-grid" id="catalogue"></div><p class="empty hidden" id="no-results">No fragrances match your filters. Try clearing your search.</p>
+      <p class="data-note">Product details and example prices are drawn from official brand listings (checked November 2026). Prices can change. Bottle artwork is illustrative. All displayed ratings are your own, saved on this device.</p>
+    </section>
+    <section class="section brands-section" id="brands"><div class="section-top"><div><p class="eyebrow olive">02 / THE HOUSES</p><h2>Meet the <em>brands.</em></h2><p class="muted">A growing directory of local and regional fragrance labels.</p></div></div><div class="brand-grid" id="brands-grid"></div></section>
+    <section class="section compare-section" id="compare"><div class="section-top"><div><p class="eyebrow olive">03 / THE HEAD-TO-HEAD</p><h2>Side by <em>side.</em></h2><p class="muted">Select up to three bottles from the catalogue to compare their facts.</p></div><button class="text-button" id="clear-compare">Clear selection ↗</button></div><div id="compare-grid" class="compare-grid"></div></section>
+    <section class="section finder-section" id="finder"><div class="finder-copy"><p class="eyebrow gold">04 / A LITTLE DIRECTION</p><h2>Not sure what<br><em>to wear?</em></h2><p>Tell us what you love. We'll rank the catalogue using a simple, transparent matching formula — no mystery algorithms.</p><div class="finder-form"><label>My budget <select id="finder-budget"><option value="75">Up to RM75</option><option value="150" selected>Up to RM150</option><option value="250">Up to RM250</option><option value="999">Any budget</option></select></label><label>My scent style <select id="finder-family"><option value="Fresh">Fresh & clean</option><option value="Citrus">Citrus</option><option value="Floral">Floral & fruity</option><option value="Woody">Woody & deep</option><option value="Aromatic">Aromatic</option><option value="Gourmand">Sweet & gourmand</option></select></label><button class="btn light" id="find-button">Find my match <span>↗</span></button></div></div><div id="finder-results" class="finder-results"><div class="finder-placeholder"><span>✳</span><strong>Your scent story<br>starts here.</strong><p>Choose your preferences and hit “Find my match”.</p></div></div></section>
+    <section class="section about-section"><p class="eyebrow olive">A NOTE FROM SCENTLAB</p><h2>Small brands.<br><em>Big personality.</em></h2><p>We're building a fragrance discovery space that puts Malaysian labels in the spotlight. We prioritise verified notes, honest personal ratings and useful comparisons. If we haven't verified something, we'll say so.</p></section>
+  </main>
+  <footer><div class="footer-head"><strong>✳ scentlab<span>.</span> <small>MY</small></strong><p>Local scents. Real discoveries.</p></div><div class="footer-links"><a href="#discover">Discover</a><a href="#brands">Brands</a><a href="#compare">Compare</a><a href="#finder">Finder</a></div><p class="footer-note">Independent educational prototype, not affiliated with the brands featured. © 2026 ScentLab MY.</p></footer>
+  <dialog id="detail-dialog" class="modal"><div id="detail-content"></div></dialog>
+  <dialog id="wishlist-dialog" class="modal"><div class="modal-top"><h2>My saved scents</h2><button class="close-btn" data-close="wishlist-dialog" aria-label="Close">✕</button></div><div id="wishlist-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
